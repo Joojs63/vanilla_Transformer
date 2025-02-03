@@ -16,7 +16,7 @@ class Encoder(nn.Module):
     ):
 
         super(Encoder, self).__init__()
-        self.embed_size = embed_size
+        self.embed_size = embed_size #굳이 있어야할까? forward에서 사용되지도 않는데
         self.device = device
         self.word_embedding = nn.Embedding(src_vocab_size, embed_size) 
         #nn.Embedding은 (src_vocab_size, embed_size) 크기의 가중치 행렬을 생성하며, 각 단어 인덱스에 해당하는 벡터를 가져올 수 있음.
